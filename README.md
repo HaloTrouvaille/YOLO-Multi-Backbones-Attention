@@ -25,7 +25,9 @@ https://pan.baidu.com/s/1Fc-zJtHy-6iIewvsKWPDnA     (extract code: k2js)
   python3 detect.py --cfg cfg/yolov3-shufflenetv2-hand.cfg --weights weights/backup100.pt --data data/oxfordhand.data
 ```
 4. Results:  
-![airplane](https://github.com/HaloTrouvaille/YOLO-Multi-Backbones-Attention/blob/master/output/airplane.png)   
+![most](https://github.com/HaloTrouvaille/YOLO-Multi-Backbones-Attention/blob/master/output/most.png)  
+![car](https://github.com/HaloTrouvaille/YOLO-Multi-Backbones-Attention/blob/master/output/car.png)  
+![airplane](https://github.com/HaloTrouvaille/YOLO-Multi-Backbones-Attention/blob/master/output/airplane.png)  
 # Changing YOLOv3 Backbone
 ## ShuffleNetV2 + Two Scales Detection(YOLO Detector)
 ### Using Oxfordhand datasets
