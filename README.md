@@ -1,6 +1,6 @@
 # Introduction  
 This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2, MobileNet***), some computer vision attention mechanism (***SE Block, CBAM Block, ECA Block***), pruning and quantization (reference to my senior's Repository https://github.com/coldlarry/YOLOv3-complete-pruning)
-# Enviroment
+# Environment
 * python 3.7  
 * pytorch >= 1.1.0  
 * opencv-python  
