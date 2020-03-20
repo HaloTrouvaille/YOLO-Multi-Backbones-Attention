@@ -39,7 +39,7 @@ https://pan.baidu.com/s/1Fc-zJtHy-6iIewvsKWPDnA     (extract code: k2js)
 ### Using Visdrone datasets(Incomplete training)
 | Model | Params | Model Size | mAP |
 | ----- | ----- | ----- |----- |
-| ShuffleNetV2 1x | 3.59M | 13.99MB | 7.3 |
+| ShuffleNetV2 1x | 3.59M | 13.99MB | 10.2 |
 | ShuffleNetV2 1.5x | 5.09M | 19.63MB | 11 |
 | YOLOv3-tiny | 8.69M | 33.9MB | 3.3 |
 # Attention Mechanism
