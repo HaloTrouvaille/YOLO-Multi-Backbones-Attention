@@ -1,10 +1,10 @@
 # Introduction  
-This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2, MobileNet***), some computer vision attention mechanism (***SE Block, CBAM Block, ECA Block***), pruning and quantization (reference to my senior's Repository https://github.com/coldlarry/YOLOv3-complete-pruning)  
-# Updata
-***2020.5.26   
-HuaWei GhostNet will be added as the backbone soon!    
-Google IAO quantization will be added soon!    
-New pruning strategies will be added soon!***  
+This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2, GhostNet***), some computer vision attention mechanism (***SE Block, CBAM Block, ECA Block***), pruning and quantization for GhostNet.
+# Important Update
+***2020.6.1   
+(1) The best HuaWei GhostNet has been added as the YOLOv3 backbone! It is better than ShuffleNetV2. The result is as following.  
+(2) Add Dorefa quantization method for arbitrary bit quantization! The result is as following.  
+(3) And I delete the ShuffleNet and the attention mechanism. If you need these previous model or have any question, you can add my WeChat: ssswwwyyy111***
 # Environment
 * python 3.7  
 * pytorch >= 1.1.0  
