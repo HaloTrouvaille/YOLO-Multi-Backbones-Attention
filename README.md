@@ -2,7 +2,7 @@
 This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2, GhostNet***), some computer vision attention mechanism (***SE Block, CBAM Block, ECA Block***), pruning and quantization for GhostNet.
 # Important Update
 ***2020.6.1   
-(1) The best HuaWei GhostNet has been added as the YOLOv3 backbone! It is better than ShuffleNetV2. The result is as following.  
+(1) The best lightweight model——HuaWei GhostNet has been added as the YOLOv3 backbone! It is better than ShuffleNetV2. The result is as following.  
 (2) Add Dorefa quantization method for arbitrary bit quantization! The result is as following.  
 (3) And I delete the ShuffleNet and the attention mechanism. If you need these previous model or have any question, you can add my WeChat: ssswwwyyy111***
 # Environment
@@ -23,17 +23,23 @@ https://pan.baidu.com/s/1Fc-zJtHy-6iIewvsKWPDnA     (extract code: k2js)
 1. Download the datasets, place them in the ***data*** directory    
 2. Train the models by using following command (change the model structure by changing the cfg file)  
 ```
-  python3 train.py --data data/oxfordhand.data --batch-size 16 --cfg cfg/yolov3-shufflenetv2-hand.cfg --img-size 608
+  python3 train.py --data data/visdrone.data --batch-size 16 --cfg cfg/ghostnet-yolov3-visdrone.cfg --img-size 640
 ```
 3. Detect objects using the trained model (place the pictures or videos in the ***samples*** directory)    
 ```
-  python3 detect.py --cfg cfg/yolov3-shufflenetv2-hand.cfg --weights weights/backup100.pt --data data/oxfordhand.data
+  python3 detect.py --cfg cfg/ghostnet-yolov3-visdrone.cfg --weights weights/best.pt --data data/visdrone.data
 ```
 4. Results:  
 ![most](https://github.com/HaloTrouvaille/YOLO-Multi-Backbones-Attention/blob/master/output/most.png)  
 ![car](https://github.com/HaloTrouvaille/YOLO-Multi-Backbones-Attention/blob/master/output/car.png)  
 ![airplane](https://github.com/HaloTrouvaille/YOLO-Multi-Backbones-Attention/blob/master/output/airplane.png)  
-# Changing YOLOv3 Backbone
+# Prune and Quantization 
+1. If you want to quantize certain convolutional layer, you can just change the [convolutional] to [quan_convolutional] in cfg file. Then use following command  
+```
+  python3 train.py --data data/visdrone.data --batch-size 16 --cfg cfg/ghostnet-yolov3-visdrone.cfg --img-size 640
+```
+***2.For pruning, I will update the pruning method for GhostNet soon!!!***
+# Experiment Result for Changing YOLOv3 Backbone
 ## ShuffleNetV2 + Two Scales Detection(YOLO Detector)
 ### Using Oxfordhand datasets
 | Model | Params | Model Size | mAP |
@@ -47,7 +53,7 @@ https://pan.baidu.com/s/1Fc-zJtHy-6iIewvsKWPDnA     (extract code: k2js)
 | ShuffleNetV2 1x | 3.59M | 13.99MB | 10.2 |
 | ShuffleNetV2 1.5x | 5.09M | 19.63MB | 11 |
 | YOLOv3-tiny | 8.69M | 33.9MB | 3.3 |
-# Attention Mechanism
+# Experiment Result for Attention Mechanism
 ### Based on YOLOv3-tiny
 SE Block paper : https://arxiv.org/abs/1709.01507  
 CBAM Block paper : https://arxiv.org/abs/1807.06521  
@@ -58,11 +64,11 @@ ECA Block paper : https://arxiv.org/abs/1910.03151
 | YOLOv3-tiny + SE | 8.933M | 62.3 |
 | YOLOv3-tiny + CBAM | 8.81M | 62.7 |
 | YOLOv3-tiny + ECA | 8.67M | 62.6 |
-# Prune and Quantization 
-Based on my senior's Repository, reference to https://github.com/coldlarry/YOLOv3-complete-pruning  
+
+ 
 # TODO
 - [x] ShuffleNetV2 backbone
-- [ ] MobileNet backbone 
+- [x] HuaWei GhostNet backbone 
 - [ ] COCO datasets training
 - [ ] Other detection strategies
 - [ ] Other pruning strategies
