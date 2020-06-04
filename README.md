@@ -69,6 +69,7 @@ ECA Block paper : https://arxiv.org/abs/1910.03151
 # TODO
 - [x] ShuffleNetV2 backbone
 - [x] HuaWei GhostNet backbone 
+- [ ] ImageNet pretraining
 - [ ] COCO datasets training
 - [ ] Other detection strategies
 - [ ] Other pruning strategies
