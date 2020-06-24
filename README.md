@@ -46,12 +46,27 @@ https://pan.baidu.com/s/1Fc-zJtHy-6iIewvsKWPDnA     (extract code: k2js)
 ![most](https://github.com/HaloTrouvaille/YOLO-Multi-Backbones-Attention/blob/master/output/most.png)  
 ![car](https://github.com/HaloTrouvaille/YOLO-Multi-Backbones-Attention/blob/master/output/car.png)  
 ![airplane](https://github.com/HaloTrouvaille/YOLO-Multi-Backbones-Attention/blob/master/output/airplane.png)  
-# Prune and Quantization 
-1. If you want to quantize certain convolutional layer, you can just change the [convolutional] to [quan_convolutional] in cfg file. Then use following command  
+# Pruning and Quantization 
+## Pruning
+First of all, execute sparse training.  
+```
+python3 train.py --data data/visdrone.data --batch-size 4 --cfg cfg/ghost-yolov3-visdrone.cfg --img-size 640 --epochs 300  --device 3 -sr --s 0.0001
+```
+Then change cfg and weights in normal_prune.py then use following command  
+```
+python normal_prune.py
+```
+After obtaining pruned.cfg and corresponding weights file, you can fine-tune the pruned model via following command  
+```
+python3 train.py --data data/visdrone.data --batch-size 4 --cfg pruned.cfg --img-size 640 --epochs 300  --device 3 --weights weights/xxx.weighs
+```
+
+## Quantization
+If you want to quantize certain convolutional layer, you can just change the [convolutional] to [quan_convolutional] in cfg file. Then use following command  
 ```
   python3 train.py --data data/visdrone.data --batch-size 16 --cfg cfg/ghostnet-yolov3-visdrone.cfg --img-size 640
 ```
-***2.For pruning, I will update the pruning method for GhostNet soon!!!***
+
 # Experiment Result for Changing YOLOv3 Backbone
 ## ShuffleNetV2 + Two Scales Detection(YOLO Detector)
 ### Using Oxfordhand datasets
