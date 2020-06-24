@@ -1,18 +1,23 @@
 # Introduction  
-This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2, GhostNet***), some computer vision attention mechanism (***SE Block, CBAM Block, ECA Block***), pruning and quantization for GhostNet.
+This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2, GhostNet***), some computer vision attention mechanism (***SE Block, CBAM Block, ECA Block***), pruning,quantization and distillation for GhostNet.
 # Important Update
-***2020.6.1   
+2020.6.1   
 (1) The best lightweight model——HuaWei GhostNet has been added as the YOLOv3 backbone! It is better than ShuffleNetV2. The result is as following.  
 (2) Add Dorefa quantization method for arbitrary bit quantization! The result is as following.  
-(3) And I delete the ShuffleNet and the attention mechanism. If you need these previous model or have any question, you can add my WeChat: ssswwwyyy111***  
+(3) And I delete the ShuffleNet and the attention mechanism. If you need these previous model or have any question, ***you can add my WeChat: ssswwwyyy111***  
+2020.6.24  
+(1) Add pruning according to NetworkSlimming.  
+(2) Add distillation for higher mAP after pruning.
+(3) Add Imagenet pretraining model for GhostNet.
+
 | Model | Params | FPS | mAP |
 | ----- | ----- | ----- |----- |
 | GhostNet+YOLOv3 | 23.49M | 62.5 | 35.1 |
-| Pruned Model | - | - | - |
-| Quantization | - | - | - |  
+| Pruned Model+Distillation | 5.81M | 76.9 | 34.3 |
+| Pruned Model+INT8 | 5.81M | 75.1 | 34 |  
   
-***Attention : The pruned and quantization results will be updated soon！！！***
-# Environment
+***Attention : Single GPU will be better***
+# Environment  
 * python 3.7  
 * pytorch >= 1.1.0  
 * opencv-python  
