@@ -7,7 +7,7 @@ This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2
 (3) And I delete the ShuffleNet and the attention mechanism.   
 ***2020.6.24***    
 (1) Add pruning according to NetworkSlimming.  
-(2) Add distillation for higher mAP after pruning.
+(2) Add distillation for higher mAP after pruning.  
 (3) Add Imagenet pretraining model for GhostNet.
 
 | Model | Params | FPS | mAP |
