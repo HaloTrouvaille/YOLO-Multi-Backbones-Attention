@@ -14,10 +14,11 @@ This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2
 | ----- | ----- | ----- |----- |
 | GhostNet+YOLOv3 | 23.49M | 62.5 | 35.1 |
 | Pruned Model+Distillation | 5.81M | 76.9 | 34.3 |
-| Pruned Model+INT8 | 5.81M | 75.1 | 34 |  
-  
+| Pruned Model+INT8 | 5.81M | 75.1 | 34 |
+| YOLOv5s | 7.27M | - | 32.7 |  
+
 ***Attention : Single GPU will be better***  
-***If you need previous attention model or have any question, you can add my WeChat: ssswwwyyy111***
+***If you need previous attention model or have any question, you can add my WeChat: AutrefoisLethe***
 # Environment  
 * python 3.7  
 * pytorch >= 1.1.0  
