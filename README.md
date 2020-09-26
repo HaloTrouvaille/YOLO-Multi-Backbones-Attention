@@ -1,5 +1,5 @@
 # Introduction  
-This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2, GhostNet***), some computer vision attention mechanism (***SE Block, CBAM Block, ECA Block***), pruning,quantization and distillation for GhostNet.
+This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2, GhostNet, VoVNet***), some computer vision attention mechanism (***SE Block, CBAM Block, ECA Block***), pruning,quantization and distillation for GhostNet.
 # Important Update
 ***2020.6.1***     
 (1) The best lightweight model——HuaWei GhostNet has been added as the YOLOv3 backbone! It is better than ShuffleNetV2. The result for visdrone dataset is as following.  
@@ -8,7 +8,9 @@ This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2
 ***2020.6.24***    
 (1) Add pruning according to NetworkSlimming.  
 (2) Add distillation for higher mAP after pruning.  
-(3) Add Imagenet pretraining model for GhostNet.
+(3) Add Imagenet pretraining model for GhostNet.  
+***2020.9.26***  
+(1) Add VoVNet as the backbone. The result is excellent.
 
 | Model | Params | FPS | mAP |
 | ----- | ----- | ----- |----- |
