@@ -19,6 +19,7 @@ This Repository includes YOLOv3 with some lightweight backbones (***ShuffleNetV2
 | Pruned Model+INT8 | 5.81M | 75.1 | 34 |
 | YOLOv5s | 7.27M | - | 32.7 |
 | YOLOv5x | 88.5M | - | 41.8 |  
+| VoVNet | 42.8M | 28.9 | 42.7 |  
 
 ***Attention : Single GPU will be better***  
 ***If you need previous attention model or have any question, you can add my WeChat: AutrefoisLethe***
