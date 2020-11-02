@@ -41,7 +41,7 @@ https://pan.baidu.com/s/1Fc-zJtHy-6iIewvsKWPDnA     (extract code: k2js)
 1. Download the datasets, place them in the ***data*** directory    
 2. Train the models by using following command (change the model structure by changing the cfg file)  
 ```
-  python3 train.py --data data/visdrone.data --batch-size 16 --cfg cfg/ghostnet-yolov3-visdrone.cfg --img-size 640
+  python3 train.py --data data/visdrone.data --batch-size 16 --cfg cfg/ghost-yolov3-visdrone.cfg --img-size 640
 ```
 3. Detect objects using the trained model (place the pictures or videos in the ***samples*** directory)    
 ```
